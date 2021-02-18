@@ -4,8 +4,8 @@
 
 ### Contenido:
 
-- Bases de HTML
-- Secciones
+- [Bases de HTML](#bases-de-hTML)
+- [Secciones](#secciones)
 - Elementos de línea
 - Atributos
 - Enlaces
@@ -72,9 +72,13 @@
 
 ### Sintaxis de HTML
 
+![Estructura](https://developer.mozilla.org/en-US/docs/Learn/Getting_started_with_the_web/HTML_basics/grumpy-cat-small.png)
+
 ```html
 <etiqueta> Contenido </etiqueta>
 ```
+
+![Anatomia HTML](https://media.prod.mdn.mozit.cloud/attachments/2014/04/09/7659/a731e40efad1f6e0b728bfcf86c0035b/anatomy-of-an-html-element.png)
 
 ### Estructura de un sitio web
 
@@ -97,9 +101,45 @@
 </html>
 ```
 
+## Secciones
+
+### Títulos y párrafos
+
+Los elementos de encabezado implementan seis niveles de encabezado del documento, `<h1>` es el más importante, y `<h6>`, el menos importante. Un elemento de encabezado describe brevemente el tema de la sección que presenta. La información de encabezado puede ser usada por los agentes usuarios, por ejemplo, para construir una tabla de contenidos para un documento automáticamente.  
+[Saber más](https://developer.mozilla.org/es/docs/Web/HTML/Elemento/Elementos_T%C3%ADtulos#p%C3%A1gina_de_ejemplo)
+
+### Header, main y footer
+
+- **Header**
+
+El elemento de HTML Header `(<header>)` representa un grupo de ayudas introductorias o de navegación. Puede contener algunos elementos de encabezado, así como también un logo, un formulario de búsqueda, un nombre de autor y otros componentes.
+
+- **Main**
+
+El elemento HTML `<main>` representa el contenido principal del `<body>` de un documento o aplicación. El área principal del contenido consiste en el contenido que está directamente relacionado, o se expande sobre el tema central de un documento o la funcionalidad central de una aplicación. Este contenido debe ser único al documento, excluyendo cualquier contenido que se repita a través de un conjunto de documentos como barras laterales, enlaces de navegación, información de derechos de autor, logos del sitio y formularios de búsqueda (a menos, claro, que la función principal del documento sea un formulario de búsqueda).
+
+- **Footer**
+
+El Elemento HTML Footer `(<footer>)` representa un pie de página para el contenido de sección más cercano o el elemento raíz de sección `(p.e, su ancestro mas cercano <article>, <aside>, <nav>, <section>,<blockquote>, <body>, <details>, <fieldset>, <figure>, <td>)`. Un pie de página típicamente contiene información acerca de el autor de la sección, datos de derechos de autor o enlaces a documentos relacionados.
+
+### Section vs Article vs Aside
+
+- **Section**
+
+Es un contenedor genérico que agrupa contenido que está relacionado. cuando creamos bloques cuyo contenido es parte de un bloque total usaremos section.
+
+- **Article**
+
+Es un contenedor que representa contenido independiente, es decir, podemos leer ese fragmento en cualquier otro sitio y tendría sentido por sí mismo.
+
+- **Aside**
+
+Se utiliza para representar contenido relacionado pero que no forma parte del contenido principal.
+
 ---
 
 ## Referencias
 
 - [Oficial W3C](https://www.w3.org/TR/html52/introduction.html)
 - [Mozilla Developer Network](https://developer.mozilla.org/es/docs/Web/HTML)
+- [Validación de código HTML](https://validator.w3.org/)
