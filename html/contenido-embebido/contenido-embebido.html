@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <h1>Contenido embebido</h1>
+    <img src="assets/img/a0ea11b96fed4efc9b5c81d128ba5298.png" width="500" alt="Stich">
+    <img src="assets/img/gifanimado.gif" width="500" alt="gif de homero">
+    <img src="assets/img/gifanimado.webp" width="500" alt="Stich">
+    <img src="assets/img/unnamed.jpg    " width="500" alt="logo de linux">
+
+    <h2>Imagen con condicional</h2>
+    <img srcset="assets/img/gifanimado.webp,
+                 assets/img/unnamed.jpg 2x" alt="">
+
+    <h2>Picture</h2>
+    <picture>
+        <!-- <source srcset="assets/img/gifanimado.webp,
+                 assets/img/unnamed.jpg"> -->
+        <source srcset="assets/img/gifanimado.webp,
+                        assets/img/gifanimado.gif" media="(min-width:1200px)">
+        <img src="assets/img/a0ea11b96fed4efc9b5c81d128ba5298.png" width="500" alt="Stich">
+    </picture>
+
+    <h2>Audio</h2>
+
+    <audio src="assets/audio/audio.mp3" controls></audio>
+
+    <h2>Video</h2>
+
+    <video src="assets/video/video.mp4" poster="assets/img/gifanimado.gif" controls></video>
+
+    <h2>Iframe</h2>
+
+    <iframe src="" frameborder="0"></iframe>
+
+    <h2>Figure</h2>
+
+    <figure></figure>
+</body>
+
+</html>

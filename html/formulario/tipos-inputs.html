@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Input</title>
+</head>
+
+<body>
+
+    <!-- button -->
+
+    <form>
+        <input>
+        <!-- input button no envia formulario pero con el atributo submit si envia el formulario-->
+        <input type="submit" value="Enviar input">
+        <button>Enviar</button>
+    </form>
+
+    <!-- Fecha -->
+
+    <form>
+        <input type="date">
+
+        <!-- datetime-local solo funciona en chrome -->
+        <input type="datetime-local">
+
+
+        <input type="date">
+        <input type="time">
+
+        <input type="month">
+        <input type="week">
+    </form>
+
+    <!-- En los telefonos se visualiza distinto a los ordenadores -->
+    <form>
+
+        <label> search
+            <input type="search">
+        </label>
+        <label> teléfono
+            <input type="tel">
+        </label>
+        <label> email
+            <input type="email">
+        </label>
+        <label> password
+            <input type="password">
+        </label>
+        <label> url
+            <input type="url">
+        </label>
+    </form>
+
+    <!-- Sin categoria -->
+
+    <form>
+        <input type="color">
+        <input type="number">
+
+        <!-- step el rango de movimiento | min determinar el valor minimo | max determinar el valor maximo-->
+        <input type="range" step="2" min="0" max="10">
+
+        <!-- Borra todos los datos del formulario -->
+        <input type="reset">
+
+        <!-- valor por defecto -->
+        <input type="text">
+
+    </form>
+</body>
+
+</html>

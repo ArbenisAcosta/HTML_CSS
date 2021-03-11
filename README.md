@@ -6,16 +6,15 @@
 
 - [Bases de HTML](#bases-de-hTML)
 - [Secciones](#secciones)
-- Elementos de línea
-- Atributos
-- Enlaces
-- Listas
-- Listas
-- Tablas
-- Otras etiquetas importantes
-- Formularios
-- Contenido Embebido
-- Etiquetas meta y accesibilidad
+- [Elementos de línea](#elementos-de-línea)
+- [Atributos](#atributos)
+- [Enlaces](#enlaces)
+- [Listas](#listas)
+- [Tablas](#tablas)
+- [Otras etiquetas importantes](#otras-etiquetas-importantes)
+- [Formularios](#formularios)
+- [Contenido Embebido](#contenido-embebido)
+- [Etiquetas meta y accesibilidad](#etiquetas-meta-y-accesibilidad)
 - [Referencias](#referencias)
 
 <br>
@@ -136,10 +135,244 @@ Es un contenedor que representa contenido independiente, es decir, podemos leer 
 
 Se utiliza para representar contenido relacionado pero que no forma parte del contenido principal.
 
+## Elementos de línea
+
+- **em** - emphasis
+- **strong** - más enfasis
+- **small** - Menos enfasis que el texto normal
+- **br** - Forzar un salto de línea
+- **wbr** - Salto de línea si hiciera falta
+- **time** - Se usa para representar un contenido de hora/fecha
+- **i** - ítalic
+- **b** - bold
+- **u** - underline
+
+## Atributos
+
+### Introducción a los atributos
+
+Los atributos son valores adicionales que configuran los elementos y/o ajustan su comportamiento.  
+En términos generales hay dos tipos de atributos:
+
+- **Comunes:**
+  Su sintaxis es -> atributo="valor"
+- **Booleanos:**
+  Su sintaxis es -> atributo
+
+## Enlaces
+
+Conocidos también por links popularmente. Su objetivo es conectar una página web con otra página web, con un recurso tanto interno como externo, o con otro sitio web.
+
+Tienen el atributo obligatorio de href, donde le especificamos la ruta del recurso o sitio que queremos obtener.  
+También tiene el atributo target, que configura cómo queremos visualizar el recurso o sitio que solicitamos.
+
+### Rutas
+
+**Rutas absolutas:**  
+Tienenun protocolo, http o https y son unicas en la red. Se suelen utilizar para rutas externas.
+
+**Rutas relativas:**  
+Pueden ser relativas al punto donde nos encontramos o relativas a la raiz del proyecto.  
+No usan protocolo.  
+Si el recurso se encuentra al mismo nivel (en la misma carpeta) podremos unicamente el nombre del archivo.  
+Si necesitamos salir de la carpeta actual usaremos ../ y se pone uno por cada nivel (carpeta)
+de la quue queramos salir.
+
+### Atributos
+
+**target:**  
+Define donde se abrirá el recurso solicitado. por norma general siempre que useis rutas absolutas pondréis como valor "\_blank"
+
+**download:**  
+Atributo booleano, sirve para descargar el recurso solicitado.  
+Importante, el recurso debe estar en tu mismo servidor.
+
+## Listas
+
+Como su nombre lo indica sirve para listar contenido. En función del tipo de contenido de nuestra lista tenemos tres tipos de listas:
+
+- **ul** -> **unordered list:** Se utiliza cuando el orden de los elementos no influye.
+- **ol** -> **ordered list:** Se utilizan cuando el orden de los elementos es importante.
+
+Cada elemento de la lista se representa con la etiqueta `<li>`, tanto en las **ul** como en las **ol**.
+
+- **dl** -> **definition list:** Se utilizan para hacer lista de definiciones
+  - **dt** -> Definition term: El término que vaos a definir.
+  - **dd** -> Definition description: la descripción del término.
+
+## Tablas
+
+Las tablas en HTML sirven para mostrar contenido tabulado.
+
+**La estructutara básica de una tabla se compone de:**
+
+- **table** -> Etiqueta que encierra una tabla
+- **tr** -> table row, etiqueta que construye una fila
+- **td** -> table data, etiqueta que construye una celda
+
+El número de celdas dentro de un td establecerá el número de columbas de la tabla.
+
+#### Título
+
+Los títulos de las tablas se establecen con la etiqueta `<capttion></capttion>`, es una etiqueta opcional, y según la especificación esa etiqueta se coloca justo después de la etiqueta table.
+
+#### Cabecera
+
+las cabeceras de las tablas se establecen con la etiqueta `<thead></thead>`. Dentro tendremos un etiqueta `<tr></tr>` normal, pero en el caso de las celdas, las estableceremos con la etiqueta `<th></th>` en lugar de `<td></td>`.
+
+#### Cuerpo
+
+El contenido de la tabla debe ir dentro de una etiqueta `<tbody></tbody>` para representar eñ cuerpo de la tabla.
+
+#### Pie de la tabla
+
+De forma opcional podemos colocar un `<tfoot></tfoot>` a la tabla para establecer un pie de tabla, esto es algo que algunas tablas tienen como suma de cantidades o total.
+
+### Atributos
+
+Para hacer que las celdas ocupen más de una fila o más de una columna tenemos dos atributos:
+
+- **rowspan:** sirve para que una celda ocupe más de una fila, el valor por defecto es 1
+
+- **colspan:** sirve para que una celda ocupe más de una columna, el valor por defecto es 1
+
+### Columna
+
+Cuando necesitamos seleccionar una columna, tenemos la etiqueta `<colgroup></colgroup>`, que nos permite seleccionar una columna en concreto. Dentro pondremos tantas etiquetas `<col></col>` como columnas tengamos, cada etiqueta `<col></col>` equivaldrá a una columna siguiendo el mismo orden que tienen en la tabla.
+
+Si necesitamos que una etiqueta con agrupe más de una columna, tenemos atributos span, que funciona exactamente igual que rowspan y colspan.
+
+## Otras etiquetas importantes
+
+### Etiquetas de bloque
+
+- **address:** Se utiliza para aportar información de contacto para el article más cercano o para todo el body.
+- **blockquote:** Se utiliza para marcar las citas a otros actores o documentos. Se puede incluir el atributo cite para poner un enlace al documento original o fuente.
+- **pre:** Se utiliza para tener código preformateado que necesita ser representado igual que se escribió.
+- **div:** Se usa como división del documento, semánticamente no significa nada, es un contenedor genérico que se usa generalmente para dar estilos a través de css o para usar algo denominado "delegación de eventos" en javascript.
+- **hr:** Horizontal rule, se utiliza para decirle al navegador que vamos a cambiar de tema.
+
+### Etiquetas de línea
+
+- **span:** Es un contenedor de línea, equivalente a div, se suele usar para encerrar palabras o pequeños textos y darles estilo a través de CSS o localizarlos desde javascript- Semánticamente no significa nada
+- **q:** Es el quivalente a blockquote, significa quote, por ese el de bloque se llama block - quote. Sirve para poner citas pero en línea.
+- **code:** Sirve para encerrar código que queremos representar visualmente, suele ir unido con la etiqueta pre.
+
+[**Entidades especiales en HTML - Código ASCRII**](https://ascii.cl/es/codigos-html.htm)
+
+## Formularios
+
+La estructura básica de un formulario se compone de 4 elemetos:
+
+- **form** -> es la etiqueta que engloba nuestro formulario.
+- **label** -> sirve para escribir el nombre del campo a rellenar, debe tener el atributo for el cual se le indica un id que hará será emparejar el label con su input correspondiente.
+- **input** -> sirve para crear un campo que permiti´ra al usuario interactuar.
+- **button** -> crea un botón que permitirá enviar el formulario.
+
+### Tipos de input
+
+**input type:**
+
+- **button** -> Se comporta igual que un botón `<button></button>`
+- **color** -> Se utiliza para especificar un color
+
 ---
 
-## Referencias
+- **date** -> Se utiliza para introducir una fecha
+- **datatime** -> Obsoleto
+- **datatime-local**-local -> fecha y hora, no funciona en firefox
+- **time** -> Se utiliza para introducir un hora
+- **month** -> Se utiliza para introducir un mer
+- **week** -> Se utiliza para introducir el número de semana del año
+
+---
+
+- **search** -> Se utiliza para las barras de búsqueda
+- **tel** -> Se utiliza para introducir números telefónicos
+- **email** -> Se utiliza para introducir un email
+- **password** -> Se utiliza para contraseñas
+- **url** -> Se utiliza para introducir URLs
+
+---
+
+- **hidden** -> Campo oculto, puede contener valor pero no se mostrará
+- **number** -> Se utiliza para valores numéricos
+- **range** -> Se utiliza para establecer un rango
+- **reset** -> Se utiliza para resetear el formulario
+- **submit** -> Se utiliza para enviar el formulario
+- **text** -> Valor por defecto
+
+### Inputs de selección
+
+- **radio** -> Permite seleccionar una única opción de una lista de opciones relacionadas.
+- **checbox** -> Permite seleccionar varias opciones de una lista de opciones relacionadas.
+- **select** -> Crea una lista de opciones donde podemos seleccionar una o varias opciones.
+
+Cada opción irá dentro de una etiqueta `<option></option>`.  
+Si tenemos muchas opciones podemos ordenarlas por categorías a través de la etiqueta `<optgroup></optgroup>` con el atributo label para nombrar la categoría.
+
+### Mas elementos de formulario
+
+- **fieldset** -> Se utiliza para agrupar elementos dentro de un formulario.
+- **legend** -> Representa una etiqueta para el contenido del fieldset.
+- **file** -> Este inpu se utiliza para cargar archivos y enviarlos desde un formulario.
+- **meter** -> Representa un valor dentro de un rango conocido.
+- **progress** -> Represtenta el progreso de una tarea.
+- **textarea** -> Se utiliza para introducir texto en un formulario
+
+### Atributos de los formularios
+
+- **placeholder** -> Da una pista de lo que el usuario tiene que introducir.
+- **required** -> Hace que un campo sea obligatorio.
+- **readonly** -> Hace que un campo sea de solo lectura.
+- **min - max** -> Establece el minimo y máximo de un campo numérico.
+- **maxlenght - minlenght** -> Estableche el minimo y máximo de caracteres de un campo de texto.
+- **selected** -> Equivale a checked en los select, sirve para establecer un opción por defecto.
+- **disabled** -> Desactiva el campo, no se podrá escribir en el autofocus.
+- **autofocus** -> Para poner el foco por defecto al cargar el formulario.
+
+### GET VS POST
+
+La diferencia entre los métodos get y post radica en la forma de enviar los datos a la página cuando se pulsa el botón “Enviar”. Mientras que el método GET envía los datos usando la URL, el método POST los envía de forma que no podemos verlos (en un segundo plano u "ocultos" al usuario).
+
+## Contenido Embebido
+
+El contenido embebido es todo el contenido que nos traemos desde fuera. Estos contenidos son los que más pesan (tamñan) añaden a un sitio web.
+
+Los tipos más conocidos son:
+
+- Imágenes
+- Audio
+- Vídeo
+- Iframes
+
+### **IMÁGENES**
+
+Los formatos de imágenes para web los podemos clasificar en 2 tipos:
+
+- Vectoriales
+  - svg (recomendado siempre que see pueda)
+- Mapa de bits
+  - jpg
+  - png 8 y 24 (si necesitáis transparencias)
+  - gif (si necesitáis una imagen animada)
+  - webp (el formato que menos pesa)
+
+**Divice Pixel Ratio**
+
+Es la relación que existe entre los píxeles reales que tiene el dispositivo y los píxeles disponibles para "pintar" contenido.
+
+**DRP** = pixeles reales / pixeles disponibles
+
+## Etiquetas meta y accesibilidad
+
+## Referencias y recursos
 
 - [Oficial W3C](https://www.w3.org/TR/html52/introduction.html)
 - [Mozilla Developer Network](https://developer.mozilla.org/es/docs/Web/HTML)
 - [Validación de código HTML](https://validator.w3.org/)
+- [Convertir una imagen a WebP](https://imagen.online-convert.com/es/convertir-a-webp)
+- [Crear Favicon](https://www.favicon-generator.org/)
+- [font Awesome](https://fontawesome.com/)
+- [The Open Graph protocol](https://ogp.me/)
+- [twitter card](https://developer.twitter.com/en/docs/twitter-for-websites/cards/overview/abouts-cards)
